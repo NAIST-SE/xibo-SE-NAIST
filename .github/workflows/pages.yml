@@ -28,5 +28,6 @@ jobs:
         PUBLISH_BRANCH: publish
         PUBLISH_DIR: ./public
       with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         emptyCommits: false
         commitMessage: ${{ github.event.head_commit.message }}
